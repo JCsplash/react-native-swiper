@@ -669,6 +669,8 @@ export default class extends Component {
       case 'idle':
       case 'settling':
         if (this.props.onTouchEnd) this.props.onTouchEnd();
+        // Android Equivalent of onScrollEndDrag
+        this.internals.isScrolling = false;
     }
   };
 
